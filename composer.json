@@ -1,0 +1,24 @@
+{
+    "name": "aiqbg/message",
+    "description": "aiqbg send message client",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "grpc/grpc": "^1.22"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "黄振",
+            "email": "847621843@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aiqbg\\Message\\":"src/",
+            "Rpc\\": "src/grpc/Rpc/",
+            "GPBMetadata\\":"src/grpc/GPBMetadata/"
+        }
+    },
+    "minimum-stability": "dev"
+}

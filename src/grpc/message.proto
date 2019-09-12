@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package rpc.message;
+
+message Common {
+
+    string receive = 1;
+    string title = 2;
+    string message = 3;
+    string send =4;
+    string send_group =5;
+}
+
+message Sentry {
+    string projectName = 1;
+    string level = 2;
+    string time = 3;
+    string message = 4;
+    string href = 5;
+    string type = 6;
+}
+
+message Reponse{
+    int32 code = 1;
+    string msg =2;
+}
+
+message OrderNo{
+    string title = 1;
+}
+
+service SendMessageService{
+    rpc SendMessage(Common) returns(Reponse);
+    rpc SendMessageSentry(Sentry) returns(Reponse);
+}
