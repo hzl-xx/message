@@ -19,14 +19,17 @@ Aiqbg\Message\MessageProvider::class
 ```
 
 ### 使用
+#### RPC请求
+
+##### sendMessage 参数
+
+#### Http请求
+##### sendMessageHttp
 ```php
 use Aiqbg\Message\Facades\Message;
 
 Message::sendMessage("测试插件", "啦啦啦啦啦啦");
 ```
-
-#### sendMessage 参数
-
 - title: 消息标题 必传
 - message: 消息内容 必传
 - user: 消息接收人 可不传
